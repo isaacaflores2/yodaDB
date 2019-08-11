@@ -1,4 +1,5 @@
 #Pychamr virtual environment
 bin/
-lib*/
+lib/
+lib64/
 *.cfg
