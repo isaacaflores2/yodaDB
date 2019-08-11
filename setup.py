@@ -10,4 +10,5 @@ setup(
     description="Small and simple database interface for the Python sqlite3 library.",
     keywords=["sqlite3", "database", "sql"],
     url="https://github.com/isaacaflores2/yodaDB",
+    python_requires='>=3'
 )
