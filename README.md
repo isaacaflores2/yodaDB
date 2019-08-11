@@ -32,3 +32,5 @@ db.updateRow(whereColumn="StudentName", equals="Princess Leia", setColumn="Grade
 db.deleteRow(whereColumn="StudentName", equals="Chewbacca")
 
 ```
+
+![](yoda.jpeg)
