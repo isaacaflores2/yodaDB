@@ -1,5 +1,6 @@
 # yodaDB
 Small and simple database interface for the Python sqlite3 library. 
+Makes use of Python keyword arguments for clean, easy to read, and intuitive code.
 
 ## Environment
 Python verson 3.7 or higher
