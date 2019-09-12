@@ -3,7 +3,7 @@ import sys
 
 class yodaSQL:
 
-    def __init__(self, rowFactory=False, **kwargs):
+    def __init__(self, rowFactory=False **kwargs):
         """
         yodaSQL constructor method:
         :Args:
