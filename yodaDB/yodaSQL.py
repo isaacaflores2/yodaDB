@@ -3,7 +3,7 @@ import sys
 
 class yodaSQL:
 
-    def __init__(self, rowFactory=False **kwargs):
+    def __init__(self, rowFactory=False, **kwargs):
         """
         yodaSQL constructor method:
         :Args:
@@ -15,9 +15,9 @@ class yodaSQL:
         """
         self._filename = kwargs["filename"] if "filename" in kwargs else "yodadb.db"
         self._tablename = kwargs["tablename"] if "tablename" in kwargs else "yodatable"
-        self.connect(rowFactory)
+        self.connectToDatabase(rowFactory)
 
-    def connect(self, rowFactory=False):
+    def connectToDatabase(self, rowFactory=False):
         """
         Creates connection to database. This method is called internally by the constructor.
         :Args:
@@ -74,7 +74,7 @@ class yodaSQL:
             Reads every row when no arguments are provided.
             **kwargs:
                 whereColumn (str): Optional argument to filter the database. Specifies which column will be used to filter the database.\n
-                equals='' (str): Optional argument to filter the database. This is argument is required when the whereColumn argument is provided.\n
+                equals'' (str): Optional argument to filter the database. This is argument is required when the whereColumn argument is provided.\n
                 Condition for which the specified column must meet.\n
                 returnColumns (tuple): Optional argument that provides an additional filter to return only the
                 specified columns instead of every columns for the filtered table that meet the WHERE Clause condition.\n
@@ -205,7 +205,7 @@ class yodaSQL:
     @filename.setter
     def filename(self, filename):
         self.filename = filename
-        self.connect()
+        self.connectToDatabase()
 
     @filename.deleter
     def filename(self):

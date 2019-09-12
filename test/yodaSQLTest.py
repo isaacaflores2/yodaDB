@@ -103,14 +103,14 @@ class yodaSQLTest(unittest.TestCase):
         for row in db.query(query):
             returnedRow = tuple([value for value in row])
 
-        expectedRow = ("R2-D2", "4", None)
+        expectedRow = ("R2-D2", "4", 'D')
         self.assertEqual(expectedRow, returnedRow)
 
         query = f'SELECT * FROM {db.tablename} WHERE StudentName=?'
         for row in db.query(query, paremeters=("R2-D2",)):
             returnedRow = tuple([value for value in row])
 
-        expectedRow = ("R2-D2", "4", None)
+        expectedRow = ("R2-D2", "4", 'D')
         self.assertEqual(expectedRow, returnedRow)
 
         db.close()
